@@ -1,0 +1,4 @@
+@EndUserText.label: 'Đếm số lần in Definition'
+define service ZMM_I_PXK_COUNT_PRINT {
+  expose ZMM_I_PXKHO_COUNT_PRINT;
+}

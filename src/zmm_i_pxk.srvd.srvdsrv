@@ -1,0 +1,5 @@
+@EndUserText.label: 'Phiếu xuất kho definition'
+define service ZMM_I_PXK {
+  expose ZMM_C_PXUATKHO      as ZMM_I_PXUATKHO;
+  expose ZMM_C_PXUATKHO_ITEM as ZMM_I_PXUATKHO_ITEM;
+}

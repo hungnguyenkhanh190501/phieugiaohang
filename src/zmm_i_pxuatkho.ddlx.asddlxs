@@ -1,0 +1,130 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Phiếu Xuất Kho',
+                typeNamePlural: 'Phiếu Xuất Kho',
+                title: { type: #STANDARD, label: 'Phiếu Xuất Kho', value: 'MaterialDocument' } },
+  presentationVariant: [{ sortOrder: [{ by: 'MaterialDocument', direction:  #DESC }] }] }
+annotate view ZMM_C_PXUATKHO
+    with 
+{
+       @UI.facet: [
+  {
+    id: 'Header',
+    purpose: #STANDARD,
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'Header',
+    position: 10
+  },{ id:              'Item',
+                 purpose:         #STANDARD,
+                 type:            #LINEITEM_REFERENCE,
+                 label:           'Item',
+                 position:        20,
+                 targetElement:   '_Item'} ] 
+  @UI: { 
+       selectionField: [ { position: 10 } ] }
+   MaterialDocumentYear;  
+//    @UI: { 
+//       selectionField: [ { position: 130 } ] }
+//   MaterialDocument ;  
+//    @UI: { 
+//       selectionField: [ { position: 140 } ] }
+//   MaterialDocumentYear;
+//    @UI: {  lineItem:       [ { position: 1, label: 'Print Status' } ],
+//       identification: [ { position: 1 , label: 'Print Status'} ]  }
+//    PrintStatus;
+//    @UI: {  lineItem:       [ { position: 5, label: 'Số lần in' } ],
+//       identification: [ { position: 5 , label: 'Số lần in'} ]  }
+//    z_count;    
+    @UI: {  lineItem:       [ { position: 10, label: 'Company Code' } ],
+       identification: [ { position: 10 , label: 'Company Code'} ] ,
+       selectionField: [ { position: 20 } ] }
+    CompanyCode;
+    @UI: {  lineItem:       [ { position: 20, label: 'Company Code Name' } ],
+       identification: [ { position: 20 , label: 'Company Code Name'} ] }
+    CompanyCodeName;
+    @UI: {  lineItem:       [ { position: 30, label: 'Plant Name' } ],
+       identification: [ { position: 30 , label: 'Plant Name'} ] }
+    PlantName;
+    @UI: {  lineItem:       [ { position: 40, label: 'Plant' } ],
+       identification: [ { position: 40 , label: 'Plant'} ],
+        selectionField: [ { position: 30 } ] }
+    Plant;
+    @UI: {  lineItem:       [ { position: 50, label: 'Delivery Type' } ],
+       identification: [ { position: 50 , label: 'Delivery Type'} ] }
+    DeliveryDocumentType;
+    @UI: {  lineItem:       [ { position: 60, label: 'Delivery Type Description ' } ],
+       identification: [ { position: 60 , label: 'Delivery Type Description '} ] }
+    DeliveryTypeDescription;
+    @UI: {  lineItem:       [ { position: 70, label: 'Supplier' } ],
+       identification: [ { position: 70 , label: 'Supplier'} ] ,
+        selectionField: [ { position: 40 } ]}
+    Supplier;
+    @UI: {  lineItem:       [ { position: 80, label: 'Customer' } ],
+       identification: [ { position: 80 , label: 'Customer'} ] ,
+        selectionField: [ { position: 50 } ]}
+    Customer;
+    @UI: {  lineItem:       [ { position: 90, label: 'Delivery Number' } ],
+       identification: [ { position: 90 , label: 'Delivery Number'} ] ,
+        selectionField: [ { position: 60 } ]}
+    DeliveryDocument;
+    @EndUserText.label: 'Planned Delivery Date'
+    @UI: {  lineItem:       [ { position: 100, label: 'Planned Delivery Date ' } ],
+       identification: [ { position: 100 , label: 'Planned Delivery Date '} ],
+        selectionField: [ { position: 70 } ] }
+    PlannedGoodsIssueDate;
+    @UI: {  lineItem:       [ { position: 110, label: 'Posting Date' } ],
+       identification: [ { position: 110 , label: 'Posting Date'} ] ,
+        selectionField: [ { position: 80 } ]}
+    PostingDate;
+    @UI: {  lineItem:       [ { position: 120, label: 'Material Document' } ],
+       identification: [ { position: 120 , label: 'Material Document'} ] }
+    MaterialDocument;
+    @UI: {  lineItem:       [ { position: 130, label: 'Movement Type' } ],
+       identification: [ { position: 130 , label: 'Movement Type'} ] ,
+        selectionField: [ { position: 90 } ]}
+    GoodsMovementType;
+    @UI: {  lineItem:       [ { position: 160, label: 'Accouting Number ' } ],
+       identification: [ { position: 160 , label: 'Accouting Number'} ] }
+    invoiceDocument;
+    @UI: {  lineItem:       [ { position: 170, label: 'Reference ' } ],
+       identification: [ { position: 170 , label: 'Reference '} ] }
+    DocumentReferenceID;
+    @UI: {  lineItem:       [ { position: 180, label: 'Create By' } ],
+       identification: [ { position: 180 , label: 'Create By'} ] ,
+        selectionField: [ { position: 100 } ]}
+    CreatedByUser;
+    @UI.hidden: true
+    StreetNameS;
+    @UI.hidden: true
+    StreetPrefixName1S;
+    @UI.hidden: true
+    StreetPrefixName2S;
+    @UI.hidden: true
+    StreetSuffixName1S;
+   @UI.hidden: true
+    StreetSuffixName2S;
+    @UI.hidden: true
+    DistrictNameS;
+    @UI.hidden: true
+    CityNameS;
+    @UI.hidden: true
+    CountryNameS;
+    //dữ liệu customer
+    @UI.hidden: true
+    StreetName;
+    @UI.hidden: true
+    StreetPrefixName1;
+    @UI.hidden: true
+    StreetPrefixName2;
+    @UI.hidden: true
+    StreetSuffixName1;
+    @UI.hidden: true
+    StreetSuffixName2;
+    @UI.hidden: true
+    DistrictName;
+    @UI.hidden: true
+    CityName;
+    @UI.hidden: true
+    CountryName;
+}
+    

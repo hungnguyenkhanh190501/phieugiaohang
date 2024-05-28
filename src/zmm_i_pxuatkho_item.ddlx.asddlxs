@@ -1,0 +1,41 @@
+@Metadata.layer: #CORE
+annotate view ZMM_C_PXUATKHO_ITEM
+    with 
+{
+   @UI: { identification: [ { position: 10, label: 'MaterialDocument'  } ] }
+    MaterialDocument;
+    @UI.hidden: true
+  MaterialDocumentYear;
+   @UI.hidden: true
+  MaterialDocumentItem;
+   @UI.hidden: true
+  Plant;
+  @UI: {  lineItem:       [ { position: 10, label: 'Mã Hàng' } ],
+       identification: [ { position: 10 , label: 'Mã Hàng'} ] }
+    MaVatTu;
+    @UI: {  lineItem:       [ { position: 20, label: 'Tên Hàng' } ],
+       identification: [ { position: 20 , label: 'Tên Hàng'} ] }
+    TenVatTu;
+    @UI: {  lineItem:       [ { position: 30, label: 'Đơn Vị Tính' } ],
+       identification: [ { position: 30 , label: 'Đơn Vị Tính'} ] }
+    DVT;
+    @UI: {  lineItem:       [ { position: 40, label: 'Mã Lô' } ],
+       identification: [ { position: 40 , label: 'Mã Lô'} ] }
+    MaLo;
+    @UI: {  lineItem:       [ { position: 50, label: 'Hạn Lô' } ],
+       identification: [ { position: 50 , label: 'Hạn Lô'} ] }
+    HanSuDung;
+    @UI: {  lineItem:       [ { position: 60, label: 'QuantityInEntryUnit' } ],
+       identification: [ { position: 60 , label: 'QuantityInEntryUnit'} ] }
+    QuantityInEntryUnit;
+    @UI: {  lineItem:       [ { position: 70, label: 'CompanyCodeCurrency' } ],
+       identification: [ { position: 70 , label: 'CompanyCodeCurrency'} ] }
+    CompanyCodeCurrency;
+    @UI: {  lineItem:       [ { position: 80, label: 'Giá' } ],
+       identification: [ { position: 80 , label: 'Giá'} ] }
+    Gia;
+    @UI: {  lineItem:       [ { position: 90, label: 'Tiền' } ],
+       identification: [ { position: 90 , label: 'Tiền'} ] }
+    Tien;
+    
+}

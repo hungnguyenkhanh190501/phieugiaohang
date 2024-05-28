@@ -1,0 +1,13 @@
+managed implementation in class zbp_mm_i_pxkho_count_print unique;
+strict ( 2 );
+
+define behavior for ZMM_I_PXKHO_COUNT_PRINT //alias <alias_name>
+persistent table zmm_tb_pxkho
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  //delete;
+}
